@@ -10,6 +10,10 @@ public class SnakeLadderProblem {
 
         int playerPosition = 0;
         System.out.println("Initial postion of the player: "+ playerPosition);
+
+        int diceRollNumber = (int)Math.floor(Math.random()*10)%6 +1;
+        System.out.println("Outcome of Dice Roll: "+ diceRollNumber);
         }
+
 
 }
