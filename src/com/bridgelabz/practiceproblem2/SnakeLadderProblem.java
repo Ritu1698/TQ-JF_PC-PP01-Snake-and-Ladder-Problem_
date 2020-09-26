@@ -15,8 +15,9 @@ public class SnakeLadderProblem {
 
         int playerPosition = 0,totalDiceRolls = 0;
         System.out.println("Initial postion of the player: "+ playerPosition);
-        while(playerPosition<WINNING_POSITION)
+        while(playerPosition!=WINNING_POSITION)
         {
+            //System.out.println("Player Position After Dice Roll & Player Option: "+ playerPosition);
             totalDiceRolls++;
             int diceRollNumber = (int)Math.floor(Math.random()*10)%6 +1;
             //System.out.println("Outcome of Dice Roll: "+ diceRollNumber);
@@ -25,7 +26,12 @@ public class SnakeLadderProblem {
             //System.out.println("Outcome of Player Option: "+ playerOption);
 
             if (playerOption == LADDER)
-                playerPosition+=diceRollNumber;
+            {
+                if(playerPosition+diceRollNumber>WINNING_POSITION);
+                else
+                    playerPosition+=diceRollNumber;
+            }
+
             else if(playerOption == SNAKE){
                 playerPosition-=diceRollNumber;
                 if(playerPosition<0)
