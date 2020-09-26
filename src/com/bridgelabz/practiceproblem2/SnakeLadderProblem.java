@@ -39,9 +39,10 @@ public class SnakeLadderProblem {
             }
 
             else  if(playerOption ==NO_PLAY);
+            System.out.println("Player Position After Dice Roll & Player Option: "+ playerPosition);
         }
 
-        System.out.println("Player Position After Dice Roll & Player Option: "+ playerPosition);
+        //System.out.println("Player Position After Dice Roll & Player Option: "+ playerPosition);
         System.out.println("Total Dice Rolls to reach Winning Position: "+totalDiceRolls);
     }
 
